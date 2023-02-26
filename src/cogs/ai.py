@@ -52,7 +52,7 @@ class AiModeration(Cog):
             style=ButtonStyle.red,
             label="Dismiss Report",
             custom_id="flagged_message_options:dismiss",
-            disabled=True,
+            disabled=disabled,
         )
         items = (jump_button, delete_button, timeout_button, kick_button, ban_button, dismiss_button)
         return View(*items, timeout=None)
