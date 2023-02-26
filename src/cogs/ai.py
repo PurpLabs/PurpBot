@@ -48,7 +48,7 @@ class AiModeration(Cog):
             url=message.jump_url,
             disabled=disabled,
         )
-        items = ( jump_button, delete_button, timeout_button, kick_button, ban_button)
+        items = (jump_button, delete_button, timeout_button, kick_button, ban_button)
         return View(*items, timeout=None)
 
     @Cog.listener()
