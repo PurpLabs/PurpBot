@@ -54,7 +54,7 @@ class AiModeration(Cog):
             custom_id="flagged_message_options:delete",
             disabled=disabled,
         )
-        items = (jump_button, dismiss_button, delete_button, timeout_button, kick_button, ban_button)
+        items = (jump_button, delete_button, timeout_button, kick_button, ban_button, dismiss_button)
         return View(*items, timeout=None)
 
     @Cog.listener()
