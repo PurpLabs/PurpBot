@@ -95,7 +95,7 @@ class AiModeration(Cog):
                 f"{message.author} has been banned.", ephemeral=True
             )
         elif action == "dismiss":
-            await interaction.message.delete(embed)
+            await interaction.message.delete()
         await interaction.message.edit(
             embed=interaction.message.embeds[0],
             view=self.build_view(message, disabled=True),
