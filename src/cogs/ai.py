@@ -51,7 +51,7 @@ class AiModeration(Cog):
         dismiss_button: Button = Button(
             style=ButtonStyle.red,
             label="Dismiss Report",
-            custom_id="flagged_message_options:delete,
+            custom_id="flagged_message_options:delete",
             disabled=disabled,
         )
         items = (jump_button, delete_button, timeout_button, kick_button, ban_button, dismiss_button)
