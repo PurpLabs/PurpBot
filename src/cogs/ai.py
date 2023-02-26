@@ -52,7 +52,7 @@ class AiModeration(Cog):
             style=ButtonStyle.red,
             label="Dismiss Report",
             custom_id="flagged_message_options:dismiss",
-            disabled=disabled,
+            disabled=True,
         )
         items = (jump_button, delete_button, timeout_button, kick_button, ban_button, dismiss_button)
         return View(*items, timeout=None)
@@ -94,8 +94,6 @@ class AiModeration(Cog):
             await interaction.response.send_message(
                 f"{message.author} has been banned.", ephemeral=True
             )
-        elif action == "dismiss":
-            await interaction.message.delete()
         await interaction.message.edit(
             embed=interaction.message.embeds[0],
             view=self.build_view(message, disabled=True),
